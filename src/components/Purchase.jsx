@@ -1,13 +1,19 @@
 //import {useState, useEffect,useRef} from 'react'
+
+import { useSelector } from "react-redux";
+
 //import Purchase from './components/Purchase'
 const Purchase = (props) => {
-  const products = [
-    { pName: "Apple", price: 20 },
-    { pName: "mango", price: 25 },
-    { pName: "orange", price: 30 },
-    { pName: "brinjal", price: 50 },
-    { pName: "tomato", price: 90 }
-  ];
+  // const products = useSelector((state) => state.products);
+  const products = useSelector(({ products }) => products);
+
+  // const products = [
+  //   // { pName: "Apple", price: 20 },
+  //   // { pName: "mango", price: 25 },
+  //   // { pName: "orange", price: 30 },
+  //   // { pName: "brinjal", price: 50 },
+  //   // { pName: "tomato", price: 90 }
+  // ];
 
   return (
     <>
